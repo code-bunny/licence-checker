@@ -1,19 +1,19 @@
 one:
   id: 1
-  description: "gamemaster-licence"
+  description: gamemaster-licence
   product_id: null
 
 two:
   id: 2
-  description: "product-01"
+  description: product-01
   product_id: null
 
 three:
   id: 3
-  description: "product-02"
+  description: product-02
   product_id: null
 
 four:
   id: 4
-  description: "sub-product-01"
+  description: sub-product-01
   product_id: 3
