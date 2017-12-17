@@ -29,4 +29,10 @@ class UserTest < TestCase
     user = User.find_by(licence_key: 'yet-anot-er-lic-ence')
     assert !user.licence_valid?
   end
+
+  def test_fetching_all_the_products_the_user_has_ever_had_licenced
+    user = User.find_by(licence_key: 'som-sup-er-secret')
+
+    assert_equal 3, user.products.size
+  end
 end
