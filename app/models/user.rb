@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
   has_many :licences
 
   def licence_valid?
-    @licence_valid ||= primary_licence.valid?
+    @licence_valid ||= !primary_licence.expired?
   end
 end

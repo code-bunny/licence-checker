@@ -1,13 +1,13 @@
 # Create users
-User.create! id: 1, licence_key: 'som-sup-er-secret'
-User.create! id: 2, licence_key: 'ano-ther-key'
-User.create! id: 3, licence_key: 'yet-anot-er-lic-ence'
+User.create! licence_key: 'som-sup-er-secret'
+User.create! licence_key: 'ano-ther-key'
+User.create! licence_key: 'yet-anot-er-lic-ence'
 
 # Create Products
 Product.create! id: 1, description: 'gamemaster-licence'
-Product.create! id: 1, description: 'product-01'
-Product.create! id: 1, description: 'product-02'
-Product.create! id: 1, description: 'sub-product-01', product_id: 3
+Product.create! id: 2, description: 'product-01'
+Product.create! id: 3, description: 'product-02'
+Product.create! id: 4, description: 'sub-product-01', product_id: 3
 
 # Create Licences
 Licence.create! key: 'som-sup-er-secret',   user_id: 1, product_id: 1, expires_at: Time.now + (3600 * 24 * 365)

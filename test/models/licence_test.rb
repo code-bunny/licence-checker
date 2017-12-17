@@ -9,9 +9,9 @@ class LicenceTest < TestCase
 
   def test_a_licence_can_expire
     licence = Licence.find_by(key: 'ano-ther-key')
-    assert !licence.valid?
+    assert licence.expired?
 
     licence = Licence.find_by(key: 'yet-anot-er-lic-ence')
-    assert !licence.valid?
+    assert licence.expired?
   end
 end

@@ -15,7 +15,7 @@
 ```docker-compose run app rake test```
 
 * Seeding the development database
-```docker-compose run app rake db:schema:load && rake db:seed```
+```docker-compose run app rake db:reset && rake db:seed```
 
 * Running on your dev enviroment
 ```docker-compose up```
