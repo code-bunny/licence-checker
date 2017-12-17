@@ -1,0 +1,13 @@
+one:
+  key: som-sup-er-secret
+  user_id: 1
+  product_id: 1
+  expires_at: null
+  expired_at: null
+
+two:
+  key: ano-ther-key
+  user_id: 1
+  product_id: 1
+  expires_at: null
+  expired_at: null
