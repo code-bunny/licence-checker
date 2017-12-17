@@ -5,3 +5,7 @@ one:
 two:
   id: 2
   licence_key: ano-ther-key
+
+three:
+  id: 3
+  licence_key: yet-anot-er-lic-ence

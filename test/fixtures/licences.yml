@@ -2,12 +2,19 @@ one:
   key: som-sup-er-secret
   user_id: 1
   product_id: 1
-  expires_at: null
+  expires_at: 2020-02-05 00:00:00
   expired_at: null
 
 two:
   key: ano-ther-key
   user_id: 1
   product_id: 1
-  expires_at: null
+  expires_at: 2020-02-05 00:00:00
+  expired_at: 2016-02-05 00:00:00
+
+three:
+  key: yet-anot-er-lic-ence
+  user_id: 1
+  product_id: 1
+  expires_at: 2016-02-05 00:00:00
   expired_at: null
