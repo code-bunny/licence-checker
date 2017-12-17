@@ -2,7 +2,6 @@
 
 class ProductSerializer
   include JSONAPI::Serializer
-  has_one :licence
 
   attribute :description
 end
