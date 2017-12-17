@@ -10,4 +10,12 @@ class LicenceTest < TestCase
     licence = Licence.find_by(key: 'som-sup-er-secret')
     assert_equal 'gamemaster-licence', licence.product.description
   end
+
+  def test_a_licence_can_expire
+    licence = Licence.find_by(key: 'ano-ther-key')
+    assert !licence.valid?
+
+    licence = Licence.find_by(key: 'yet-anot-er-lic-ence')
+    assert !licence.valid?
+  end
 end
