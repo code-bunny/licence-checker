@@ -48,5 +48,14 @@ user_id | key | expires_at | expired_at | product_id
 ## products
 product_id | description
 
-
 Note: Assume ActiveRecord defaults (id, created_at, updated_at)
+
+## Now for the API
+
+So it seems we have a endpoint to check if a licence is valid and then return all the products active under that
+licence. Though that part is a little vague to me truthfully. I am going to go with a endpoint when you prodvide
+the users primary licence key and then get back nil if they licence is invalid or if it is valud it will return
+some information about the licance and details of the products the user has. 
+
+This seems to make sense to me, if i am checking a API for a status, i want to send a simple request and get back
+the information most relevent.

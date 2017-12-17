@@ -14,7 +14,7 @@ module Routes
         end
       end
 
-      mount Routes::V1::Products
+      mount Routes::V1::LicenceStatus
     end
   end
 end

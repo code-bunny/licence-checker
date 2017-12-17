@@ -2,21 +2,21 @@
 
 module Routes
   module V1
-    class Products < Grape::API
+    class LicenceStatus < Grape::API
       helpers do
         # find the user that owns the licance if any
         def user
-          @user ||= User.where(licence_key: params[:"primary-licence-key"])
+          @user ||= User.find_by(licence_key: params[:"primary-licence-key"])
         end
       end
 
-      resource :products do
+      resource :'licence-status' do
         desc ''
         params do
           requires :"primary-licence-key", type: String, desc: 'The primary licence key for the account'
         end
         get do
-          {}
+          serialize user, is_collection: false
         end
       end
     end
