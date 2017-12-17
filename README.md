@@ -31,7 +31,7 @@ Write an API to check the status of the current user's licence. Assume that:
 * A user has only one parent Licence, which can have multiple sub-licences attached;
 * The parent and sub-licences can be expired/revoked independently.
 
-So lets set, we have auth. Great that saved a few minutes.
+So lets see, we have auth. Great that saved a few minutes.
 Products and sub-products, also known as modules. But lets go for products
 A user has a primary licance key for the main product
 A user can have many sub licance keys for products and sub-products
