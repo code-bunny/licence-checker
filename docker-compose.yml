@@ -1,0 +1,22 @@
+app:
+  volumes:
+    - ./:/var/www/bunny/
+  build: ./
+  environment:
+    DATABASE_HOST: db
+    DATABASE_USERNAME: root
+    DATABASE_PASSWORD: super-secret
+  links:
+    - db
+  ports:
+    - '5000:5000'
+  command: foreman start
+db:
+  image: mysql:5.7
+  ports:
+    - "3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: super-secret
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  volumes:
+    - ./.mysql:/var/lib/mysql
