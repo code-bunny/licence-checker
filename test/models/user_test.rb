@@ -32,6 +32,6 @@ class UserTest < TestCase
 
   def test_fetching_all_the_products_the_user_has_ever_had_licenced
     user = User.find_by(licence_key: 'som-sup-er-secret')
-    assert_equal 3, user.products.size
+    assert_equal 2, user.products.size
   end
 end
