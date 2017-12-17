@@ -16,7 +16,7 @@ module Routes
           requires :"primary-licence-key", type: String, desc: 'The primary licence key for the account'
         end
         get do
-          serialize user.licences, include: 'product', is_collection: true
+          serialize user.products, include: 'licence', is_collection: true
         end
       end
     end
