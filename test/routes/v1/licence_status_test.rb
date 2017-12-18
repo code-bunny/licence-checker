@@ -7,6 +7,11 @@ class ApiV1LicenceStatusTest < ApiV1TestCase
     get '/licence-status?primary-licence-key=som-sup-er-secret'
 
     assert_equal 0, response.data[0].relationships['sub-products'].data.size
+  end
+
+  def test_sub_products_are_included
+    get '/licence-status?primary-licence-key=som-sup-er-secret'
+
     assert_equal 'product-02', response.data[1].attributes.description
     assert_equal 1, response.data[1].relationships['sub-products'].data.size
   end
