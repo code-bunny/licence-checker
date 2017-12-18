@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :products, lambda {
     where(arel_table[:description].not_eq('gamemaster-licence')).where(product_id: nil)
   }, through: :licences
-  has_many :licences
+  has_many :licences, -> { where('expires_at > ? AND expired_at IS NULL', Time.now) }
 
   def licence_valid?
     @licence_valid ||= !primary_licence.expired?
