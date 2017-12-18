@@ -6,8 +6,12 @@ module Routes
       helpers do
         # find the user that owns the licance if any
         def user
-          @user ||= User.find_by(licence_key: params[:"primary-licence-key"])
+          @user ||= User.find_by!(licence_key: params[:"primary-licence-key"])
         end
+      end
+
+      rescue_from ActiveRecord::RecordNotFound do
+        error!({ error: 'Invalid Licence.' }, 404, 'Content-Type' => 'text/error')
       end
 
       resource :'licence-status' do
