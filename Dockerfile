@@ -14,8 +14,8 @@ COPY . /var/www/bunny
 # Change workdir
 WORKDIR /var/www/bunny
 
-# Expose port 5000
-EXPOSE 5000
+# Expose port 3000
+EXPOSE 3000
 
 # Gem setup
 RUN gem install foreman

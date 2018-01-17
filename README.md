@@ -20,7 +20,7 @@
 * Running on your dev enviroment
 ```docker-compose up```
 
-The app will be on port 5000 of localhost.
+The app will be on port 3000 of localhost.
 
 # About the app
 

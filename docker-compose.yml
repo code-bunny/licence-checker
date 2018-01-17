@@ -6,10 +6,11 @@ app:
     DATABASE_HOST: db
     DATABASE_USERNAME: root
     DATABASE_PASSWORD: super-secret
+    PORT: 3000
   links:
     - db
   ports:
-    - '5000:5000'
+    - '3000:3000'
   command: foreman start
 db:
   image: mysql:5.7
