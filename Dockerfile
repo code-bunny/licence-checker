@@ -19,6 +19,7 @@ EXPOSE 5000
 
 # Gem setup
 RUN gem install foreman
+RUN gem install bundler
 RUN bundle install
 
 # Run goliath in production mode

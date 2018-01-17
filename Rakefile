@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bundler/setup'
+require 'bundler'
 require 'rake/testtask'
 load 'tasks/otr-activerecord.rake'
 

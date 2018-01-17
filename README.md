@@ -6,7 +6,7 @@
 ```Go to the docker website and find insturctions for your platform```
 
 * Setup the app
-```docker-compose run app rake db:create && rake db:schema:load && rake db:test:prepare```
+```docker-compose run app rake db:create && docker-compose run app rake db:schema:load && docker-compose run app rake db:test:prepare```
 
 * (Optional) the above command may require you to run build first
 ```docker-compose build```
@@ -15,7 +15,7 @@
 ```docker-compose run app rake test```
 
 * Seeding the development database
-```docker-compose run app rake db:reset && rake db:seed```
+```docker-compose run app rake db:reset && docker-compose run app rake db:seed```
 
 * Running on your dev enviroment
 ```docker-compose up```

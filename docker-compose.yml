@@ -14,9 +14,10 @@ app:
 db:
   image: mysql:5.7
   ports:
-    - "3306"
+    - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: super-secret
     MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
   volumes:
     - ./.mysql:/var/lib/mysql
+  restart: always
